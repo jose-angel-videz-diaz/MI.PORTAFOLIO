@@ -1,0 +1,220 @@
+/* secsion de pruebas */
+/* fin seccion de pruebas */
+
+.bord-card {
+    border-radius: 30px;
+    background-color: rgb(28, 33, 59);
+    /* background-color: rgb(34, 40, 73); */
+}
+
+/* color morado de los titulos de la seccion acerca de mi */
+.t-m {
+    color: rgb(19, 3, 18);
+}
+
+/* Animación de brillo  acerca de mi */
+@keyframes border-acerca-de-mi {
+    0% {
+        box-shadow: 0 0 30px rgba(128, 0, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(139, 34, 243);
+    }
+}
+
+.acerca-de-mi {
+    background-color: rgba(170, 101, 226, 0.616);
+    box-shadow: 0 0 20px rgba(150, 100, 200, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:border-acerca-de-mi 2s infinite alternate;
+}
+
+/* Animación de brillo seccion 2 */
+@keyframes seccion-2 {
+    0% {
+        box-shadow: 0 0 30px rgba(0, 60, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(34, 90, 243);
+    }
+}
+
+.seccion-2 {
+    background-color: rgba(101, 170, 226, 0.616);
+    box-shadow: 0 0 20px rgba(100, 168, 200, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:seccion-2 2s infinite alternate;
+}
+
+/* Animación de brillo seccion 3 */
+@keyframes seccion-3 {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(243, 34, 34);
+    }
+}
+
+.seccion-3 {
+    background-color: rgba(226, 101, 101, 0.616);
+    box-shadow: 0 0 20px rgba(200, 100, 100, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:seccion-3 2s infinite alternate;
+}
+
+/* Animación de brillo seccion 4 */
+@keyframes seccion-4 {
+    0% {
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(41, 243, 34);
+    }
+}
+
+.seccion-4 {
+    background-color: rgba(101, 226, 107, 0.616);
+    box-shadow: 0 0 20px rgba(100, 200, 100, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:seccion-4 2s infinite alternate;
+}
+
+/* Animación de brillo seccion 5 */
+@keyframes seccion-5 {
+    0% {
+        box-shadow: 0 0 30px rgba(238, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(243, 240, 34);
+    }
+}
+
+.seccion-5 {
+    background-color: rgba(226, 213, 101, 0.616);
+    box-shadow: 0 0 20px rgba(200, 193, 100, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:seccion-5 2s infinite alternate;
+}
+
+/* Animación de brillo seccion 6 */
+@keyframes seccion-6 {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(243, 128, 34);
+    }
+}
+
+.seccion-6 {
+    background-color: rgba(226, 157, 101, 0.616);
+    box-shadow: 0 0 20px rgba(200, 160, 100, 0.5); /* Sombra para darle efecto de burbuja */
+    animation:seccion-6 2s infinite alternate;
+}
+
+/* estilos de cada seccion en general */
+section {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+/* estilos del body y scroll */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Desactiva el scroll horizontal */
+    background: black; /* Fondo negro para las estrellas */
+}
+
+/* estilos main para scrolll*/
+main {
+    max-width: 100vw; /* Asegúrate de que el contenido no se desborde horizontalmente */
+}
+
+/* estilos para el fondo de estrellas */
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegúrate de que las estrellas estén detrás del contenido */
+    pointer-events: none; /* Permite que los eventos de ratón pasen a través del contenedor de estrellas */
+}
+
+.star {
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%; /* Hace que las estrellas sean redondas */
+    animation: moveStars linear infinite, twinkle 1s infinite ease-in-out;
+}
+
+/* estilos de mi foto */
+.img {
+    border-radius: 50%;
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(128, 200, 100, 0.5);
+    animation:seccion-2 2s infinite alternate;
+    height: 300px;
+    width: 300px;
+}
+
+/* estilos de la mini seccion de acerca de mi */
+.section {
+    border-radius: 50px;
+    border: 4px solid rgb(255, 255, 255);
+}
+
+/* estilos para las estrellas de las listas */
+.star-list {
+    list-style: none; /* Eliminar las viñetas predeterminadas */
+    padding: 0;
+}
+.star-list li {
+    padding-left: 20px; /* Espacio a la izquierda del texto */
+    position: relative; /* Posición relativa para el uso de pseudo-elemento */
+}
+.star-list i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(19, 3, 18);
+}
+
+.star-list b {
+    color: rgb(19, 3, 18);
+}
+
+/* keyframe para las estrellas */
+@keyframes moveStars {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--translate-x), var(--translate-y));
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+@media (min-width: 576px) {  
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
