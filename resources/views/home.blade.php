@@ -73,15 +73,71 @@
             </section>
 
             <section class="row seccion-2 mb-5 px-5 py-5 text-white" id="seccion2" data-url="mis-proyectos">
+                <article>
+                    <h1 class="text-center t-a">Mis Proyectos</h1>
+                </article>
+
+                <article class="mb-3">
+                    <p>
+                        A continuación, encontrarás una selección de proyectos en los que he trabajado, 
+                        demostrando mis habilidades en desarrollo web y mi pasión por crear soluciones 
+                        innovadoras. Cada proyecto refleja mi compromiso con la calidad y la mejora contínua.
+                    </p>
+                </article>
+
                 <article class="col-lg-6 col-md-6 col-sm-12 mb-3">
                     <div class="card bord-card">
                         <div class="card-header text-center">
-                          Proyecto 1
+                            <h5>Proyecto 1</h5>
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h4 class="card-title text-center">UNIVERSARIUM</h4>
+                            <p class="card-text text-center">
+                                Desarrollo de una pagina para un planetario
+                            </p>
+                            <h5>Tecnologias</h5>
+                            <ul>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-universarium" class="btn btn-primary btn-card">Ver mas sobre este proyecto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="modal" tabindex="-1" id="modal-universarium">
+                    <div class="modal-dialog">
+                        <div class="modal-content modal-style bg-dark">
+                            <div class="modal-header">
+                                <h5 class="modal-title">UNIVERSARIUM</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Desarrollé esta pagina para una planetario hipotetico, con un diseño 
+                                    amigable y moderno. La página incluye secciones de información sobre la 
+                                    empresa, servicios ofrecidos, presentación de clientes, seccion de precios 
+                                    y un formulario de contacto interactivo.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="https://jose-angel-videz-diaz.github.io/UNIVERSARIUM/index.html" class="btn btn-primary btn-card">Ir al proyecto</a>
+                                <button type="button" class="btn btn-primary btn-card" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="card bord-card">
+                        <div class="card-header text-center">
+                            Proyecto 2
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Proximamente...</h5>
+                            <p class="card-text">Proximamente...</p>
+                            <a class="btn btn-primary btn-card">Proximamente...</a>
                         </div>
                     </div>
                 </article>
@@ -89,25 +145,12 @@
                 <article class="col-lg-6 col-md-6 col-sm-12 mb-3">
                     <div class="card bord-card">
                         <div class="card-header text-center">
-                          Proyecto 2
+                            Proyecto 3
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                    <div class="card bord-card">
-                        <div class="card-header text-center">
-                          Proyecto 3
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Proximamente...</h5>
+                            <p class="card-text">Proximamente...</p>
+                            <a class="btn btn-primary btn-card">Proximamente...</a>
                         </div>
                     </div>
                 </article>
@@ -115,12 +158,12 @@
                 <article class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card bord-card">
                         <div class="card-header text-center">
-                          Proyecto 4
+                            Proyecto 4
                         </div>
                         <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Proximamente...</h5>
+                            <p class="card-text">Proximamente...</p>
+                            <a class="btn btn-primary btn-card">Proximamente...</a>
                         </div>
                     </div>
                 </article>
@@ -316,7 +359,7 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
-    <script src="{{ asset('js/background.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+    {{-- <script src="{{ asset('js/background.js') }}"></script> --}}
 </body>
 </html>

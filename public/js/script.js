@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const baseUrl = ''; // Dejar baseUrl vacío para usar la URL actual del navegador
+    const numberOfStars = 500;
+
+    function createStars() {
+        const starField = document.createElement('div');
+        starField.id = 'stars';
+        document.body.appendChild(starField);
+
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            
+            const translateX = (Math.random() - 0.5) * 2000;
+            const translateY = (Math.random() - 0.5) * 2000;
+            star.style.setProperty('--translate-x', `${translateX}px`);
+            star.style.setProperty('--translate-y', `${translateY}px`);
+            star.style.animationDuration = `${Math.random() * 30 + 30}s`;
+
+            starField.appendChild(star);
+        }
+    }
+
+    createStars();
+
+    const baseUrl = '';
     const sections = document.querySelectorAll('section');
     const links = document.querySelectorAll('.nav-link');
 
@@ -25,11 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Actualizar URL al cargar la página y al hacer scroll
     window.addEventListener('load', updateURL);
     window.addEventListener('scroll', updateURL);
 
-    // Manejar clics en los enlaces de navegación
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
@@ -38,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Desplazar a la sección correcta al cargar la página
     const path = window.location.pathname.replace(baseUrl, '').replace('/', '');
     if (path) {
         const targetSection = document.querySelector(`[data-url="${path}"]`);
@@ -46,4 +73,32 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView();
         }
     }
+
+    const sectionColors = {
+        seccion1: '#ffca28', // Color para la sección 1 amarillo
+        seccion2: '#e7201f', // Color para la sección 2 rojo
+        seccion3: '#891cba', // Color para la sección 3 morado
+        seccion4: '#33ff57', // Color para la sección 4 verde
+        seccion5: '#0f0f0f', // Color para la sección 5 negro
+        seccion6: '#020429'  // Color para la sección 6 azul
+    };
+
+    function updateScrollbarColor(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentSection = entry.target.getAttribute('data-url');
+                if (currentSection && sectionColors[currentSection]) {
+                    document.documentElement.style.setProperty('--scrollbar-thumb-color', sectionColors[currentSection]);
+                }
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(updateScrollbarColor, {
+        threshold: 0.5 // Detectar cuando al menos el 50% de la sección está en vista
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });

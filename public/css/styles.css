@@ -4,12 +4,26 @@
 .bord-card {
     border-radius: 30px;
     background-color: rgb(28, 33, 59);
+    /* border: 4px solid rgb(255, 255, 255); */
     /* background-color: rgb(34, 40, 73); */
+}
+
+.btn-card {
+    border-radius: 30px;
+}
+
+.modal-style{
+    /* background-color: aqua; */
+    border-radius: 20px;
 }
 
 /* color morado de los titulos de la seccion acerca de mi */
 .t-m {
     color: rgb(19, 3, 18);
+}
+
+.t-a {
+    color: rgb(2, 4, 41);
 }
 
 /* Animación de brillo  acerca de mi */
@@ -149,9 +163,9 @@ main {
 /* estilos de mi foto */
 .img {
     border-radius: 50%;
-    border: 4px solid rgb(255, 255, 255);
-    box-shadow: 0 0 20px rgba(128, 200, 100, 0.5);
-    animation:seccion-2 2s infinite alternate;
+    border: 4px solid rgb(19, 3, 18);
+    box-shadow: 0 0 10px 5px rgba(75, 0, 130, 0.5), /* sombra difusa morado oscuro */
+                0 0 20px 10px rgba(75, 0, 130, 0.7);
     height: 300px;
     width: 300px;
 }
@@ -200,6 +214,24 @@ main {
     50% {
         opacity: 1;
     }
+}
+
+/* Estilo del scrollbar en navegadores webkit (Safari, Chrome, etc.) */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+    height: 10px; /* Alto des scrollbar */
+}
+
+/* Estilo del track (la parte no desplazable) */
+::-webkit-scrollbar-track {
+    background: #e7eaf8; /* Color de fondo del track */
+    border-radius: 5px
+}
+
+/* Estilo del thumb (la parte desplazable) */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color, #CCC); /* Color del thumb */
+    border-radius: 10px; /* Radio de la esquina del thumb */
 }
 
 /* responsive */
