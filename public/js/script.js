@@ -73,32 +73,4 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView();
         }
     }
-
-    const sectionColors = {
-        seccion1: '#ffca28', // Color para la sección 1 amarillo
-        seccion2: '#e7201f', // Color para la sección 2 rojo
-        seccion3: '#891cba', // Color para la sección 3 morado
-        seccion4: '#33ff57', // Color para la sección 4 verde
-        seccion5: '#0f0f0f', // Color para la sección 5 negro
-        seccion6: '#020429'  // Color para la sección 6 azul
-    };
-
-    function updateScrollbarColor(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const currentSection = entry.target.getAttribute('data-url');
-                if (currentSection && sectionColors[currentSection]) {
-                    document.documentElement.style.setProperty('--scrollbar-thumb-color', sectionColors[currentSection]);
-                }
-            }
-        });
-    }
-
-    const observer = new IntersectionObserver(updateScrollbarColor, {
-        threshold: 0.5 // Detectar cuando al menos el 50% de la sección está en vista
-    });
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
 });

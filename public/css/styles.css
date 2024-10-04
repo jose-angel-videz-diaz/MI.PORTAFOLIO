@@ -1,32 +1,7 @@
-/* secsion de pruebas */
-/* fin seccion de pruebas */
+/* ESTILOS SECCION 1 ACERCA DE MI */
 
-.bord-card {
-    border-radius: 30px;
-    background-color: rgb(28, 33, 59);
-    /* border: 4px solid rgb(255, 255, 255); */
-    /* background-color: rgb(34, 40, 73); */
-}
 
-.btn-card {
-    border-radius: 30px;
-}
-
-.modal-style{
-    /* background-color: aqua; */
-    border-radius: 20px;
-}
-
-/* color morado de los titulos de la seccion acerca de mi */
-.t-m {
-    color: rgb(19, 3, 18);
-}
-
-.t-a {
-    color: rgb(2, 4, 41);
-}
-
-/* Animación de brillo  acerca de mi */
+/* Animación de brillo  seccion 1 */
 @keyframes border-acerca-de-mi {
     0% {
         box-shadow: 0 0 30px rgba(128, 0, 255, 0.5);
@@ -38,9 +13,82 @@
 
 .acerca-de-mi {
     background-color: rgba(170, 101, 226, 0.616);
-    box-shadow: 0 0 20px rgba(150, 100, 200, 0.5); /* Sombra para darle efecto de burbuja */
+    box-shadow: 0 0 20px rgba(150, 100, 200, 0.5);
     animation:border-acerca-de-mi 2s infinite alternate;
 }
+
+/* color morado de los titulos de la seccion acerca de mi */
+.t-m {
+    color: rgb(19, 3, 18);
+}
+
+/* estilos de mi foto */
+.img {
+    border: 4px solid rgb(19, 3, 18);
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: moving-glow 3s infinite linear;
+}
+
+/* animacion de mi foto */
+@keyframes moving-glow {
+    0% {
+        box-shadow: 10 10 10px 5px rgba(149, 0, 255, 0.5),
+                    0 0 20px 10px rgba(103, 7, 148, 0.7);
+    }
+    25% {
+        box-shadow: 10px 0 15px 7px rgba(149, 0, 255, 0.5),
+                    20px 0 30px 15px rgba(103, 7, 148, 0.7);
+    }
+    50% {
+        box-shadow: 0 10px 15px 7px rgba(149, 0, 255, 0.5),
+                    0 20px 30px 15px rgba(95, 0, 163, 0.7);
+    }
+    75% {
+        box-shadow: -10px 0 15px 7px rgba(149, 0, 255, 0.5),
+                    -20px 0 30px 15px rgba(103, 7, 148, 0.7);
+    }
+    100% {
+        box-shadow: 10 10 10px 5px rgba(149, 0, 255, 0.5),
+                    0 0 20px 10px rgba(103, 7, 148, 0.7);
+    }
+}
+
+/* estilos para las estrellas de las listas seccion 1*/
+.star-list {
+    list-style: none; 
+    padding: 0;
+}
+
+.star-list li {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.star-list i {
+    margin-right: 10px;
+    color: rgb(19, 3, 18);
+    flex-shrink: 0;
+}
+
+.star-list b {
+    color: rgb(19, 3, 18);
+}
+
+
+
+
+
+
+
+
+/* ESTILOS SECCION 2 MIS PROYECTOS */
+
 
 /* Animación de brillo seccion 2 */
 @keyframes seccion-2 {
@@ -48,66 +96,263 @@
         box-shadow: 0 0 30px rgba(0, 60, 255, 0.5);
     }
     100% {
-        box-shadow: 0 0 60px rgb(34, 90, 243);
+        box-shadow: 0 0 60px rgb(0, 119, 255);
     }
 }
 
 .seccion-2 {
     background-color: rgba(101, 170, 226, 0.616);
-    box-shadow: 0 0 20px rgba(100, 168, 200, 0.5); /* Sombra para darle efecto de burbuja */
+    box-shadow: 0 0 20px rgba(100, 168, 200, 0.5);
     animation:seccion-2 2s infinite alternate;
 }
+
+/* estilos para las estrellas de las listas de los modales */
+.star-list-modals {
+    list-style: none; 
+    padding: 0;
+}
+
+.star-list-modals li {
+    display: flex;
+    align-items: flex-start;
+    position: relative; 
+}
+
+.star-list-modals i {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    flex-shrink: 0;
+}
+
+.star-list-modals b {
+    color: rgb(255, 255, 255);
+}
+
+/* tamaño de los iconos del modal de la seccion 2 */
+.fs-icon {
+    font-size: 100px;
+}
+
+@media (max-width: 576px) {
+    .fs-icon {
+        font-size: 70px !important; 
+    }
+}
+
+/* imagenes iguales en los cards de la seccion 2 */
+.img-card {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 300px; 
+    object-fit: cover;
+    width: 100%;
+}
+
+/* x blanca del modal */
+.btn-close {
+    filter: invert(1);
+}
+
+.btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* estilos de las cards de la seccion 2 */
+.bord-card {
+    border-radius: 30px;
+    background-color: rgb(28, 33, 59);
+}
+
+/* estilos de los botones de la seccion 2 */
+.btn-card {
+    border: none;
+}
+
+.btn-card:hover {
+    color: #000;
+    background: rgba(83, 223, 255, 0.945);
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); 
+}
+
+/* color azul de los titulos de la seccion mis proyectos*/
+.t-a {
+    color: rgb(2, 4, 41);
+}
+
+.bg-purple {
+    background-color: rgb(112, 44, 246);
+}
+
+/* color de fondo de la barra de progreso */
+.progress {
+    background-color: #bcdcec;
+}
+
+/* estilos del boton de volver arriba */
+.btn-top-s2 {
+    background: rgb(28, 33, 59);
+    border: solid 2px white;
+}
+
+.btn-top-s2:hover {
+    color: #000;
+    background: rgba(83, 223, 255, 0.945);
+    border: solid 2px black;
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); 
+}
+
+/* estilos del link del modal */
+.link-modal {
+    color: aqua;
+}
+
+.link-modal:hover {
+    color: aqua;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+/* ESTILOS SECCION 3 MI FORMACION Y EXPERIENCIA */
+
 
 /* Animación de brillo seccion 3 */
 @keyframes seccion-3 {
     0% {
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
     }
     100% {
-        box-shadow: 0 0 60px rgb(243, 34, 34);
+        box-shadow: 0 0 60px rgb(34, 243, 139);
     }
 }
 
 .seccion-3 {
-    background-color: rgba(226, 101, 101, 0.616);
-    box-shadow: 0 0 20px rgba(200, 100, 100, 0.5); /* Sombra para darle efecto de burbuja */
+    background-color: rgba(101, 226, 163, 0.616);
+    box-shadow: 0 0 20px rgba(100, 200, 100, 0.5);
     animation:seccion-3 2s infinite alternate;
 }
 
+/* color de los titulos dee la seccion 3 */
+.t-v {
+    color: rgb(6, 43, 5);
+}
+
+/* color del selector activo del nav de la seccion 3 */
+.nav-link.active {
+    /* background-color: rgb(42, 92, 37) !important; */
+    background: #51f9b8 !important;
+    color: black !important;
+    border: solid 2px black;
+    border-radius: 30px;
+}
+
+/* color del body del nav seccion 3 */
+.tab-content {
+    border: solid 3px rgb(6, 43, 5);
+    border-radius: 20px;
+    background: #8be0bf;
+}
+
+/* color de los links */
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: white;
+}
+
+/* estilos boton volver arriba */
+.btn-top-s3 {
+    background: rgb(42, 92, 37);
+    border: solid 2px white;
+}
+
+.btn-top-s3:hover {
+    color: #000;
+    background: rgba(83, 255, 189, 0.945);
+    border: solid 2px black;
+    box-shadow: 0 0 20px rgba(0, 255, 221, 0.8); 
+}
+
+/* color de fondo del body de los items del acordeon */
+.bg-1 {
+    background: #ccffed;
+}
+
+/* color de fondo del body de los items del acordeon 2 */
+.bg-2 {
+    background: #d3f4e8;
+}
+
+/* Color para el boton del acordeon cuando no esta colpasado (cerrado) */
+.accordion-button:not(.collapsed) {
+    background-color: rgb(98, 165, 92);
+}
+
+/* Color para el botón del acordeon cuando está colapsado (abierto) */
+.accordion-button.collapsed {
+    background-color: rgb(98, 165, 92); 
+}
+
+/* tamaño de iconos de descarga */
+.fs-icon-s3 {
+    font-size: 40px;
+}
+
+/* estilos botones de descarga */
+.border-download {
+    border: solid 2.5px black;
+    border-radius: 30px;
+    min-height: 150px;
+}
+
+.border-download:hover {
+    color: #000;
+    background: rgba(83, 255, 189, 0.945);
+    box-shadow: 0 0 10px rgba(0, 255, 221, 0.8); 
+}
+
+/* estilos de las flechas del acordeon */
+.accordion-button:focus {
+    box-shadow: none; 
+    outline: none; 
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS SECCION 4 MI CONTACTO */
+
+
 /* Animación de brillo seccion 4 */
 @keyframes seccion-4 {
-    0% {
-        box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 60px rgb(41, 243, 34);
-    }
-}
-
-.seccion-4 {
-    background-color: rgba(101, 226, 107, 0.616);
-    box-shadow: 0 0 20px rgba(100, 200, 100, 0.5); /* Sombra para darle efecto de burbuja */
-    animation:seccion-4 2s infinite alternate;
-}
-
-/* Animación de brillo seccion 5 */
-@keyframes seccion-5 {
-    0% {
-        box-shadow: 0 0 30px rgba(238, 255, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 60px rgb(243, 240, 34);
-    }
-}
-
-.seccion-5 {
-    background-color: rgba(226, 213, 101, 0.616);
-    box-shadow: 0 0 20px rgba(200, 193, 100, 0.5); /* Sombra para darle efecto de burbuja */
-    animation:seccion-5 2s infinite alternate;
-}
-
-/* Animación de brillo seccion 6 */
-@keyframes seccion-6 {
     0% {
         box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
     }
@@ -116,29 +361,227 @@
     }
 }
 
-.seccion-6 {
+.seccion-4 {
     background-color: rgba(226, 157, 101, 0.616);
-    box-shadow: 0 0 20px rgba(200, 160, 100, 0.5); /* Sombra para darle efecto de burbuja */
-    animation:seccion-6 2s infinite alternate;
+    box-shadow: 0 0 20px rgba(200, 160, 100, 0.5);
+    animation:seccion-4 2s infinite alternate;
 }
+
+/* color de los titulos de la seccion 4 */
+.t-n {
+    color: rgb(43, 22, 5);
+}
+
+/* estilos del boton de volver arriba */
+.btn-top-s4 {
+    background: rgb(59, 42, 28);
+    border: solid 2px white;
+}
+
+.btn-top-s4:hover {
+    color: #000;
+    background: rgba(255, 166, 83, 0.945);
+    border: solid 2px black;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.8); 
+}
+
+/* estilos de donde se visualiza el pdf */
+iframe {
+    width: 100%; 
+    height: auto; 
+    border: none; 
+    border-radius: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* estilo de los bordes para los divs de las redes */
+.border-s4-card {
+    border: solid 3px black;
+    border-radius: 30px;
+    color: #000;
+}
+
+/* hover de los divs de cada red */
+.border-s4-card-what:hover {
+    background: linear-gradient(45deg, #25D366, #128C7E, #075E54); 
+    box-shadow: 0 0 20px rgba(18, 140, 126, 0.8); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #000000; 
+}
+
+.border-s4-card-mess:hover {
+    background: linear-gradient(45deg, #0004ff, #006AFF, #0052FF, #833AB4, #b43aae);
+    box-shadow: 0 0 20px rgba(0, 106, 255, 0.8);
+    border: solid 3px rgb(0, 0, 0);
+    border-radius: 30px;
+    color: #000000;
+}
+
+.border-s4-card-ins:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    box-shadow: 0 0 20px rgba(188, 24, 136, 0.8); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #000000; 
+}
+
+.border-s4-card-email:hover {
+    background: linear-gradient(45deg, #EA4335, #FFFFFF); 
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.8);
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #000000;
+}
+
+.border-s4-card-twitter:hover {
+    background: linear-gradient(45deg, #000000, #FFFFFF, #000000);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #000000; 
+}
+
+.border-s4-card-tel:hover {
+    background: linear-gradient(45deg, #0052FF, #FFFFFF, #0052FF); 
+    box-shadow: 0 0 20px rgba(52, 94, 183, 0.8);
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #000000; 
+}
+
+.border-s4-card-link:hover {
+    background: linear-gradient(45deg, #0A66C2, #004182); 
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.8); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px; 
+    color: #fff; 
+}
+
+.border-s4-card-git:hover {
+    background: linear-gradient(45deg, #333333, #24292e);
+    box-shadow: 0 0 20px rgba(36, 41, 46, 0.8); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px;
+    color: #fff; 
+}
+
+.border-s4-card-face:hover {
+    background: linear-gradient(45deg, #1877F2, #42A5F5);
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.8); 
+    border: solid 3px rgb(0, 0, 0);
+    border-radius: 30px;
+    color: #ffffff; 
+}
+
+.border-s4-card-hv:hover {
+    background: #ea9247;
+    box-shadow: 0 0 15px rgb(190, 99, 14); 
+    border: solid 3px rgb(0, 0, 0); 
+    border-radius: 30px; 
+    color: #333;
+}
+
+/* hace que todas las clases extiendan el borde general */
+.border-card-s4-what,
+.border-card-s4-mess,
+.border-card-s4-ins,
+.border-card-s4-email,
+.border-card-s4-twitter,
+.border-card-s4-tel,
+.border-card-s4-link,
+.border-card-s4-git,
+.border-card-s4-face,
+.border-card-s4-hv {
+    @extend .border-card-s4;
+}
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS SECCION 5 AGRADECIMIENTOS */
+
+
+/* Animación de brillo seccion 5 */
+@keyframes seccion-5 {
+    0% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 60px rgb(243, 34, 34);
+    }
+}
+
+.seccion-5 {
+    background-color: rgba(226, 101, 101, 0.616);
+    box-shadow: 0 0 20px rgba(200, 100, 100, 0.5);
+    animation:seccion-5 2s infinite alternate;
+}
+
+/* estilos de los creditos */
+.credits-container {
+    border-radius: 30px;
+    height: 400px; 
+    overflow: hidden; 
+    background-color: #000; 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.credits {
+    text-align: center;
+    position: absolute;
+    bottom: -100%;
+    animation: scrollCredits 25s linear infinite;
+}
+
+@keyframes scrollCredits {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
+.space {
+    margin: 20px 0;
+}
+
+/* color de los titulos de la seccion 5 */
+.t-r {
+    color: rgb(43, 5, 5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS GENERALES */
+
 
 /* estilos de cada seccion en general */
 section {
     border: 4px solid rgb(255, 255, 255);
     border-radius: 50px;
-}
-
-/* estilos del body y scroll */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Desactiva el scroll horizontal */
-    background: black; /* Fondo negro para las estrellas */
-}
-
-/* estilos main para scrolll*/
-main {
-    max-width: 100vw; /* Asegúrate de que el contenido no se desborde horizontalmente */
 }
 
 /* estilos para el fondo de estrellas */
@@ -148,53 +591,16 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Asegúrate de que las estrellas estén detrás del contenido */
-    pointer-events: none; /* Permite que los eventos de ratón pasen a través del contenedor de estrellas */
+    z-index: -1; 
+    pointer-events: none;
 }
 
 .star {
     position: absolute;
     background: white;
     opacity: 0.8;
-    border-radius: 50%; /* Hace que las estrellas sean redondas */
+    border-radius: 50%; 
     animation: moveStars linear infinite, twinkle 1s infinite ease-in-out;
-}
-
-/* estilos de mi foto */
-.img {
-    border-radius: 50%;
-    border: 4px solid rgb(19, 3, 18);
-    box-shadow: 0 0 10px 5px rgba(75, 0, 130, 0.5), /* sombra difusa morado oscuro */
-                0 0 20px 10px rgba(75, 0, 130, 0.7);
-    height: 300px;
-    width: 300px;
-}
-
-/* estilos de la mini seccion de acerca de mi */
-.section {
-    border-radius: 50px;
-    border: 4px solid rgb(255, 255, 255);
-}
-
-/* estilos para las estrellas de las listas */
-.star-list {
-    list-style: none; /* Eliminar las viñetas predeterminadas */
-    padding: 0;
-}
-.star-list li {
-    padding-left: 20px; /* Espacio a la izquierda del texto */
-    position: relative; /* Posición relativa para el uso de pseudo-elemento */
-}
-.star-list i {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgb(19, 3, 18);
-}
-
-.star-list b {
-    color: rgb(19, 3, 18);
 }
 
 /* keyframe para las estrellas */
@@ -216,26 +622,7 @@ main {
     }
 }
 
-/* Estilo del scrollbar en navegadores webkit (Safari, Chrome, etc.) */
-::-webkit-scrollbar {
-    width: 10px; /* Ancho del scrollbar */
-    height: 10px; /* Alto des scrollbar */
-}
-
-/* Estilo del track (la parte no desplazable) */
-::-webkit-scrollbar-track {
-    background: #e7eaf8; /* Color de fondo del track */
-    border-radius: 5px
-}
-
-/* Estilo del thumb (la parte desplazable) */
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb-color, #CCC); /* Color del thumb */
-    border-radius: 10px; /* Radio de la esquina del thumb */
-}
-
 /* responsive */
-
 @media (min-width: 576px) {  
 }
 
@@ -249,4 +636,61 @@ main {
 }
 
 @media (min-width: 1400px) {
+}
+
+/* estilos del body y scroll */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Desactiva el scroll horizontal */
+    background: black; /* Fondo negro para las estrellas */
+}
+
+/* estilos main para evitar el scrolll*/
+main {
+    max-width: 100vw; /* Asegúrate de que el contenido no se desborde horizontalmente */
+}
+
+/* estilos para los selectores para cad seccion */
+.selector-1 ::selection {
+    background-color: #5f00ac;
+    color: #000;
+}
+
+.selector-2 ::selection {
+    background-color: #0045ac;
+    color: #000;
+}
+
+.selector-3 ::selection {
+    background-color: #00ac56;
+    color: #000;
+}
+
+.selector-5 ::selection {
+    background-color: #ac6200;
+    color: #000;
+}
+
+.selector-4 ::selection {
+    background-color: #ac0000;
+    color: #000;
+}
+
+/* scroll inicial funcional */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+} 
+
+/* Estilo del thumb (la parte desplazable) */
+::-webkit-scrollbar-thumb {
+    background: #f18787; 
+    border-radius: 10px;
+} 
+
+/* Estilo del track (la parte no desplazable) */
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+    border-radius: 5px
 }
