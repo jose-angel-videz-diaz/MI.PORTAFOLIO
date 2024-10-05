@@ -563,6 +563,7 @@ iframe {
 .btn-top-s5 {
     background: rgb(59, 28, 28);
     border: solid 2px white;
+    color: white;
 }
 
 .btn-top-s5:hover {

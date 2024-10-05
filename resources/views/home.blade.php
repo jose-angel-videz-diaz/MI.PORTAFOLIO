@@ -681,7 +681,7 @@
                     </p>
                 </article>
                 <article class="col-lg-12 col-md-12 col-sm-12 mb-3">
-                    <a class="btn btn-primary btn-top-s5 rounded-pill w-100" href="#top">Ir al repositorio<i class="bi bi-arrow-right-circle ms-2"></i></a>
+                    <a class="btn btn-top-s5 rounded-pill w-100" href="https://github.com/jose-angel-videz-diaz/MI.PORTAFOLIO/tree/master" target="_blank">Ir al repositorio<i class="bi bi-arrow-right-circle ms-2"></i></a>
                 </article>
                 <article class="text-white text-center mt-3">
                     <p class="fs-6">
