@@ -73,4 +73,47 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView();
         }
     }
+
+        // Función para lanzar confeti
+        function launchConfetti() {
+            const duration = 10 * 1000; // Duración del confeti
+            const end = Date.now() + duration;
+    
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    startVelocity: 25,
+                    decay: 0.9,
+                    scalar: 1,
+                    ticks: 200,
+                    origin: { x: Math.random(), y: Math.random() - 0.2 },
+                });
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+    
+        // Función para verificar si se ha llegado a la sección final al 50%
+    function checkScroll() {
+        const lastSection = document.querySelector('section:last-of-type'); // Selecciona la última sección
+        const rect = lastSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Verifica si el 50% de la última sección está visible
+        if (rect.top <= windowHeight * 0.5 && rect.bottom >= windowHeight * 0.5) {
+            launchConfetti();
+            // Eliminar el listener después de lanzar confeti para no lanzar múltiples veces
+            window.removeEventListener('scroll', checkScroll);
+        }
+    }
+    
+        // Agregar el evento scroll
+        window.addEventListener('scroll', checkScroll);
+
+        // Agregar evento de clic a la imagen
+    const confettiImage = document.getElementById('celebrateImage');
+    confettiImage.addEventListener('click', launchConfetti);
 });

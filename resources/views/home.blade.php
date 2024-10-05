@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>mi portafolio</title>
+    <link rel="icon" href="{{ asset('images/logo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
@@ -652,12 +653,12 @@
                     <a class="btn btn-primary btn-top-s4 ms-auto rounded-pill" href="#top">Volver arriba<i class="bi bi-chevron-double-up ms-2"></i></a>
                 </article>
             </section>
-            <section class="row seccion-5 mb-5 px-5 py-5 selector-4" id="seccion5" data-url="agradecimientos">
+            <section class="row seccion-5 mb-5 px-5 py-5 selector-5" id="seccion5" data-url="agradecimientos">
                 <article class="col-lg-12 mb-3">
                     <h1 class="text-center t-r">¡Has llegado al final!</h1>
                 </article>
                 <article class="mb-3 text-white">
-                    <div class="credits-container">
+                    <div class="credits-container d-flex justify-content-center align-items-center">
                         <div class="credits">
                             <h2 class="space">Agradecimientos</h2>
                             <p>Quiero expresar mi más sincero agradecimiento a todos los visitantes de mi página. Su apoyo y interés son fundamentales para seguir creciendo y mejorando.</p>
@@ -673,11 +674,65 @@
                         </div>
                     </div>
                 </article>
-                <article class="mb-5 t-r text-center">
-                    <p class="fw-bold">
+                <article class="text-white text-center">
+                    <p class="fs-6">
                         Este sitio web fue desarrollado utilizando JavaScript, Laravel, Bootstrap 5, HTML, CSS y Composer. Además, 
                         cuenta con un repositorio disponible en GitHub para facilitar su gestión y colaboración.
                     </p>
+                </article>
+                <article class="col-lg-12 col-md-12 col-sm-12 mb-3">
+                    <a class="btn btn-primary btn-top-s5 rounded-pill w-100" href="#top">Ir al repositorio<i class="bi bi-arrow-right-circle ms-2"></i></a>
+                </article>
+                <article class="text-white text-center mt-3">
+                    <p class="fs-6">
+                        A continuación, encontraras unos videos con el detras de escena de la página
+                    </p>
+                </article>
+                <article class="text-center mb-3">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video class="d-block w-100" autoplay muted loop>
+                                    <source src="{{ asset('videos/video_1.mp4') }}" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" autoplay muted loop>
+                                    <source src="{{ asset('videos/video_2.mp4') }}" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-100" autoplay muted loop>
+                                    <source src="{{ asset('videos/video_3.mp4') }}" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </article>
+                <article class="text-white text-center">
+                    <h4>Gracias por tu visita, espero verte pronto nuevamente. ¡Hasta la próxima!</h4>
+                </article>
+                <article class="text-center">
+                    <img class="img-fluid logo" style="width: 150px; height:150px;" src="{{ asset('images/logo.png') }}" id="celebrateImage">
+                </article>
+                <article class="col-lg-12 col-md-12 col-sm-12 mb-3 d-flex">
+                    <a class="btn btn-primary btn-top-s5 ms-auto rounded-pill" href="#top">Volver arriba<i class="bi bi-chevron-double-up ms-2"></i></a>
                 </article>
                 <article class="text-center mt-5">
                     <small class="text-white">
@@ -688,6 +743,7 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

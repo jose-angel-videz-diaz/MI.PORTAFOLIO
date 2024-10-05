@@ -530,10 +530,6 @@ iframe {
     height: 400px; 
     overflow: hidden; 
     background-color: #000; 
-    color: #fff; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Arial', sans-serif;
     position: relative;
 }
@@ -541,16 +537,16 @@ iframe {
 .credits {
     text-align: center;
     position: absolute;
-    bottom: -100%;
+    bottom: -800px;
     animation: scrollCredits 25s linear infinite;
 }
 
 @keyframes scrollCredits {
     0% {
-        bottom: -100%;
+        bottom: -800px; /* Empieza desde abajo */
     }
     100% {
-        bottom: 100%;
+        bottom: 400px; /* Termina arriba */
     }
 }
 
@@ -561,6 +557,28 @@ iframe {
 /* color de los titulos de la seccion 5 */
 .t-r {
     color: rgb(43, 5, 5);
+}
+
+/* estilos del boton de volver arriba */
+.btn-top-s5 {
+    background: rgb(59, 28, 28);
+    border: solid 2px white;
+}
+
+.btn-top-s5:hover {
+    color: #000;
+    background: rgba(255, 83, 83, 0.945);
+    border: solid 2px black;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
+}
+
+.logo {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
 
 
@@ -667,12 +685,12 @@ main {
     color: #000;
 }
 
-.selector-5 ::selection {
+.selector-4 ::selection {
     background-color: #ac6200;
     color: #000;
 }
 
-.selector-4 ::selection {
+.selector-5 ::selection {
     background-color: #ac0000;
     color: #000;
 }
