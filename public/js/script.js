@@ -114,6 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', checkScroll);
 
         // Agregar evento de clic a la imagen
-    const confettiImage = document.getElementById('celebrateImage');
-    confettiImage.addEventListener('click', launchConfetti);
+        const confettiImage = document.getElementById('celebrateImage');
+        confettiImage.addEventListener('click', launchConfetti);
 });

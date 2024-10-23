@@ -675,10 +675,12 @@
                     </div>
                 </article>
                 <article class="text-white text-center">
-                    <p class="fs-6">
-                        Este sitio web fue desarrollado utilizando JavaScript, Laravel, Bootstrap 5, HTML, CSS y Composer. Además, 
-                        cuenta con un repositorio disponible en GitHub para facilitar su gestión y colaboración.
-                    </p>
+                    <marquee direction="">
+                        <p class="fs-6">
+                            Este sitio web fue desarrollado utilizando JavaScript, Laravel, Bootstrap 5, HTML, CSS y Composer. Además, 
+                            cuenta con un repositorio disponible en GitHub para facilitar su gestión y colaboración.
+                        </p>
+                    </marquee>
                 </article>
                 <article class="col-lg-12 col-md-12 col-sm-12 mb-3">
                     <a class="btn btn-top-s5 rounded-pill w-100" href="https://github.com/jose-angel-videz-diaz/MI.PORTAFOLIO/tree/master" target="_blank">Ir al repositorio<i class="bi bi-arrow-right-circle ms-2"></i></a>
